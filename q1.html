@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+    <style>
+        *{
+             background: rgb(255, 228, 241);
+             color: aliceblue;
+        }
+        #rectangle {
+            height: 300px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: flex-start; 
+            transition: justify-content 4s ease-in;
+        }
+        #circle {
+            height: 300px;
+            background-color: red;
+            width: 300px;
+            border-radius: 100%;
+            transition: top 2s ease; 
+            position: relative;
+            top: 0%; 
+        }
+
+        .moveButton{
+            background-color:rgb(148, 148, 148);
+            cursor: pointer;
+            
+        }
+        #moveButton:hover{
+            background-color:rgb(39, 39, 39);
+            
+        }
+
+    </style>
+</head>
+<body>
+   
+    <div id="rectangle">
+        <div id="circle"></div>
+    </div>
+
+    <br>
+    <button class="moveButton" id="move">Move Circle</button>
+   <a href="index.html" > 
+       <button class="moveButton"> Home Page</button>
+   </a>
+   <a href="q2.html" > 
+       <button class="moveButton">next question</button>
+   </a>
+    <script>
+        document.getElementById('move').addEventListener('click', function() {
+            
+            var rectangle = document.getElementById('rectangle');
+            var circle = document.getElementById('circle');
+            rectangle.style.justifyContent = "flex-end";
+            circle.style.top="50%"
+        });
+        
+    </script>
+</body>
+</html>

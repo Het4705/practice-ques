@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4
+
+    </title>
+    <style>
+        #outer {
+            display: none;
+
+        }
+
+        #inner {
+            flex-direction: column;
+        }
+
+        .properties {
+            background-color: blue;
+            color: white;
+            margin: 6px;
+        }
+
+        #box1 {
+            margin-bottom: 20px;
+            width: 500px;
+            height: 30px;
+        }
+
+        #box3 {
+            height: 484px;
+            width: 500px;
+        }
+
+        #box2 {
+            margin-top: 40px;
+            width: 200px;
+            height: 500px;
+        }
+
+        #box4 {
+            margin-top: 40px;
+            width: 200px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hidden">
+        <div class="box1" style="background-color:blue ; color: white;">1</div>
+        <div class="box2" style="background-color:blue ; color: white;">2</div>
+        <div class="box3" style="background-color:blue ; color: white;">3</div>
+        <div class="box4" style="background-color:blue ; color: white;">4</div>
+    </div>
+    <br>
+    
+    <button onclick="func()" class="hidden">Transform</button>
+    
+    <div id="outer">
+        
+        <div id="box2" class="properties">2</div>
+        <div id="inner">
+            <div id="box1" class="properties">1</div>
+            <div id="box3" class="properties">3</div>
+        </div>
+        <div id="box4" class="properties">4</div>
+    </div>
+    <script>
+        function func() {
+            var hiddens = document.getElementsByClassName("hidden");
+            for (var i = 0; i < hiddens.length; i++) {
+                hiddens[i].style.display = "none";
+            }
+            document.getElementById("outer").style.display = "flex";
+            
+        }
+        </script>
+
+<a href="index.html"> 
+    <button> Home Page</button>
+</a>
+
+</body>
+
+</html>

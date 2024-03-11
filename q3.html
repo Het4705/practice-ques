@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+    <style>
+        #first {
+            display: block;
+            justify-content: center;
+            /* padding-bottom: 30vh; */
+        }
+
+        #second {
+            display: block;
+            justify-content: space-between;
+        }
+        
+        .inner{
+           /* display: flex; */
+        }
+        
+        */ body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #main-box{
+            width: 810px;
+        }
+        </style>
+        <script>
+            function transform(){
+        document.getElementById("first").style.display = "flex";
+        document.getElementById("first").style.paddingBottom = "30vh";
+        
+        document.getElementById("second").style.display = "flex";
+        
+        var innerElements = document.getElementsByClassName("inner");
+        for (var i = 0; i < innerElements.length; i++) {
+            innerElements[i].style.display = "flex";
+        }
+        
+    }
+        </script>
+</head>
+
+<body>
+    <div id="main-box">
+        <div id="first">
+            <div id="green" style="background-color: green;width: 90px; height:30px">C</div>
+        </div>
+        <div id="second">
+
+            <div class="inner">
+
+                <div id="red" style="background-color: red;width: 90px; height:30px">G</div>
+                <div id="golden" style="background-color: rgb(255, 191, 29);width: 90px; height:30px">D</div>
+                <div id="blue" style="background-color: blue;width: 90px; height:30px">S</div>
+            </div>
+
+            <div class="inner">
+                <div id="yellow" style="background-color: yellow;width: 90px; height:30px">2023</div>
+                <div id="purple" style="background-color: purple;width: 90px; height:30px">-</div>
+                <div id="brown" style="background-color: brown;width: 90px; height:30px">2024</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button onclick="transform()">transform</button>
+    <a href="index.html"> 
+        <button> Home Page</button>
+    </a>
+    <a href="q4.html" > 
+        <button >next question</button>
+    </a>
+     
+</body>
+
+</html>

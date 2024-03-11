@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+        #grid-container {
+         
+            grid-template-columns: 1fr 4fr;
+            width: 70vw;
+            transition:  display 2s;
+            display: none;
+        }
+
+        .grid-item {
+            background-color: aquamarine;
+            color: rgb(0, 0, 0);
+            border: dashed black;
+        }
+
+        .grid-item1 {
+            height: 20vh;
+        }
+
+        .grid-item3 {
+            height: 60vh;
+        }
+    </style>
+</head>
+
+<body>
+<div class="hidden">
+
+    <div style="background-color: aquamarine;">
+        box 1
+    </div>
+    
+    <div style="background-color: aquamarine;">
+        box 2
+    </div>
+    
+    <div style="background-color: aquamarine;">
+        box 3
+    </div>
+    <div style="background-color: aquamarine;">
+        box 4
+    </div>
+</div>
+<button onclick="transform()" class="hidden" >Transform</button>
+
+    <div id="grid-container">
+
+        <div class="grid-item grid-item1">
+            box 1
+        </div>
+
+        <div class="grid-item grid-item2">
+            box 2
+        </div>
+
+        <div class="grid-item grid-item3">
+            box 3
+        </div>
+        <div class="grid-item grid-item4">
+            box 4
+        </div>
+
+
+    </div>
+    <a href="index.html"> 
+        <button> Home Page</button>
+    </a>
+    
+    <a href="q3.html" > 
+        <button >next question</button>
+    </a>
+</body>
+<script>
+    function transform() {
+        var hiddenElements = document.getElementsByClassName("hidden");
+        for (var i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].style.display = "none";
+        }
+        document.getElementById("grid-container").style.display = "grid";
+    }
+</script>
+
+</html>
